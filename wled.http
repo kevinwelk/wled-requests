@@ -1,0 +1,104 @@
+### Get status
+GET http://192.168.10.170/json/state
+Content-Type: application/json
+
+### Switch general on
+POST http://192.168.10.170/json/state
+Content-Type: application/json
+
+{
+    "on": true
+}
+
+### Switch off
+POST http://192.168.10.170/json/state
+Content-Type: application/json
+
+{
+    "on": false
+}
+
+### Xmas
+POST http://192.168.10.170/json/state
+Content-Type: application/json
+
+{
+  "on": true,
+  "bri": 20,
+  "seg": {
+    "fx": 74,
+    "sx": 128,
+    "ix": 128
+  }
+}
+
+### Solid
+POST http://192.168.10.170/json/state
+Content-Type: application/json
+
+{
+  "on": true,
+  "bri": 20,
+  "seg": {
+    "fx": 0,
+    "col": [
+        [
+          255,
+          255,
+          255
+        ]
+    ]
+  }
+}
+
+### Spots
+POST http://192.168.10.170/json/state
+Content-Type: application/json
+
+{
+  "on": true,
+  "bri": 20,
+  "seg": {
+    "fx": 85,
+    "sx": 140,
+    "ix": 140,
+    "col": [
+        [
+          255,
+          255,
+          255
+        ]
+    ]
+  }
+}
+
+### Scan Dual Red
+POST http://192.168.10.170/json/state
+Content-Type: application/json
+
+{
+  "on": true,
+  "bri": 20,
+  "seg": {
+    "fx": 11,
+    "sx": 200,
+    "ix": 100,
+    "col": [
+        [
+          255,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0
+        ]
+    ]
+  }
+}
